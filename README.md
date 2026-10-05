@@ -1,10 +1,19 @@
 # MinecraftPort
 
-Mod ports and porting documentation for the Wolfgang modpack's migration to Minecraft 26.2 (Fabric).
+A practical, technical how-to for **porting Minecraft mods** across game versions and mod loaders —
+Forge → Fabric, NeoForge → Fabric, and version-to-version lifts.
 
 ## Contents
-- `ports/` — 122 mods supplied for the 26.2 Fabric build: hand-ports and manual builds of mods with no official 26.2 Fabric release on CurseForge. The rest of the pack comes straight from CurseForge and is not duplicated here.
-- `docs/Wolfgang-262-Porting-Playbook.md` — a reusable playbook for porting any mod to 26.2 Fabric from Forge / NeoForge / older Fabric: decision tree, toolchain, cross-loader strategy, API codemods, GUI/render cookbook, crash-guard recipes, validation stack, difficulty tiering.
+- **[`docs/Minecraft-Mod-Porting-Playbook.md`](docs/Minecraft-Mod-Porting-Playbook.md)** — the
+  guide. A reusable, full-stack playbook: a port decision tree (triage before you code), toolchain
+  and mapping setup, a cross-loader conversion map, an API-change cheatsheet, a GUI/render porting
+  cookbook, a crash-guard pattern library, a layered validation stack, common failure modes →
+  fixes, distribution, and difficulty tiering. The methodology is version-agnostic; the worked
+  examples use the 1.21.x/Forge/NeoForge → Minecraft 26.2 Fabric transition for concrete detail.
+- `ports/` — a reference archive of example ports produced with this approach (jars kept for study,
+  not as a maintained distribution).
 
 ## License / redistribution
-The jars in `ports/` are modified and/or third-party mods; each retains its original author's license (several are all-rights-reserved). This is a private archive — do not redistribute publicly without checking each mod's license. The documentation is original work.
+The documentation is original work. The jars in `ports/` are modified and/or third-party mods; each
+retains its original author's license (several are all-rights-reserved) — **do not redistribute them
+publicly without checking each mod's license.**
